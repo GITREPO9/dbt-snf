@@ -1,5 +1,5 @@
 {{config(
-    materialized = "view"
+    materialized = "table"
 )}}
 
 with cust as(
@@ -8,4 +8,4 @@ select
     first_name,
     last_name
 from raw.jaffle_shop.customers)
-select * from cust;
+select * from cust
